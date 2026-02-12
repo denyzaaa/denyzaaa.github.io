@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Be my Valentine ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            font-family:Arial, Helvetica, sans-serif;
+            background:linear-gradient(135deg,#ff4e8a,#ff9ecb);
+            color:white;
+            text-align:center;
+        }
+
+        h1{
+            font-size:3rem;
+        }
+
+        button{
+            padding:12px 20px;
+            margin:10px;
+            font-size:18px;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+        }
+
+        .yes{
+            background:#2ecc71;
+            color:white;
+        }
+
+        .no{
+            background:#e74c3c;
+            color:white;
+            position:absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Will you be my Valentine? ❤️</h1>
+
+    <div>
+        <button class="yes" onclick="alert('Yaaay ❤️')">Yes</button>
+        <button class="no" id="noBtn">No</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("mouseover", () => {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        });
+    </script>
+</body>
+</html>
